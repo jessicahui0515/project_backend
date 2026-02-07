@@ -1,15 +1,11 @@
 package com.FSSE2510_project_jessica.FSSE2510_project.controller;
 
 import com.FSSE2510_project_jessica.FSSE2510_project.config.EnvConfig;
-import com.FSSE2510_project_jessica.FSSE2510_project.data.transactionProduct.TransactionProductRespData;
-import com.FSSE2510_project_jessica.FSSE2510_project.data.transactionProduct.TransactionProductRespDto;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.transactions.TransactionRespData;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.transactions.TransactionRespDto;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.transactions.TransactionStatusResponse;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.user.domainObject.FirebaseUserReqData;
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transaction.TransactionDtoMapper;
-import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transactionProduct.TransactionProductDataMapper;
-import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transactionProduct.TransactionProductDtoMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.user.UserDataMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.service.TransactionService;
 import com.stripe.exception.StripeException;
@@ -28,7 +24,7 @@ public class TransactionController {
     private final TransactionService transactionService;
     private final TransactionDtoMapper transactionDtoMapper;
 
-    public TransactionController(UserDataMapper userDataMapper, TransactionService transactionService, TransactionDtoMapper transactionDtoMapper, TransactionProductDataMapper transactionProductDataMapper, TransactionProductDtoMapper transactionProductDtoMapper) {
+    public TransactionController(UserDataMapper userDataMapper, TransactionService transactionService, TransactionDtoMapper transactionDtoMapper) {
         this.userDataMapper = userDataMapper;
         this.transactionService = transactionService;
         this.transactionDtoMapper = transactionDtoMapper;

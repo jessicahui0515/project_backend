@@ -29,16 +29,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<ProductRespData> getAllProduct(){
         Iterable<ProductEntity> productEntityIterable = productRepository.findAll();
-        List<ProductRespData> productRespDataList = productDataMapper.toProductRespDataList(productEntityIterable);
-        return productRespDataList;
+        return productDataMapper.toProductRespDataList(productEntityIterable);
     }
     @Override
     public ProductRespData getProductByPid(Integer pid){
         try {
             ProductEntity productEntity = getEntityByPid(pid);
-            ProductRespData respData = productDataMapper.toProductRespData(productEntity);
-
-            return respData;
+            return productDataMapper.toProductRespData(productEntity);
         } catch (Exception e) {
             logger.warn("Get Product failed:{}", e.getMessage());
             throw e;

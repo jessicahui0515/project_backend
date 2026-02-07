@@ -23,10 +23,6 @@ public class UserServiceImpl implements UserService {
     public UserEntity getUserEntityByEmail(FirebaseUserReqData userData){
         Optional<UserEntity> userEntity = userRepository.findByEmail(userData.getEmail());
 
-        if(userEntity.isEmpty()){
-            return  userRepository.save(userEntityMapper.toUserEntity(userData));
-        } else{
-            return userEntity.get();
-        }
+        return userEntity.orElseGet(() -> userRepository.save(userEntityMapper.toUserEntity(userData)));
     }
 }

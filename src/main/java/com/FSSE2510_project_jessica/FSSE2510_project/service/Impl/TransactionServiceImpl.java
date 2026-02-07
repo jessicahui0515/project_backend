@@ -13,8 +13,6 @@ import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transaction.Transact
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transaction.TransactionEntityMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.transactionProduct.TransactionProductEntityMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.repository.CartItemRepository;
-import com.FSSE2510_project_jessica.FSSE2510_project.repository.ProductRepository;
-import com.FSSE2510_project_jessica.FSSE2510_project.repository.TransactionProductRepository;
 import com.FSSE2510_project_jessica.FSSE2510_project.repository.TransactionRepository;
 import com.FSSE2510_project_jessica.FSSE2510_project.service.ProductService;
 import com.FSSE2510_project_jessica.FSSE2510_project.service.StripeService;
@@ -44,7 +42,7 @@ public class TransactionServiceImpl implements TransactionService {
     private final ProductService productService;
     private final StripeService stripeService;
 
-    public TransactionServiceImpl(CartItemRepository cartItemRepository, UserService userService, TransactionEntityMapper transactionEntityMapper, TransactionProductEntityMapper transactionProductEntityMapper, TransactionRepository transactionRepository, TransactionDataMapper transactionDataMapper, TransactionProductRepository transactionProductRepository, ProductRepository productRepository, ProductService productService, StripeService stripeService, StripeService stripeService1) {
+    public TransactionServiceImpl(CartItemRepository cartItemRepository, UserService userService, TransactionEntityMapper transactionEntityMapper, TransactionProductEntityMapper transactionProductEntityMapper, TransactionRepository transactionRepository, TransactionDataMapper transactionDataMapper, ProductService productService, StripeService stripeService1) {
         this.cartItemRepository = cartItemRepository;
         this.userService = userService;
         this.transactionEntityMapper = transactionEntityMapper;

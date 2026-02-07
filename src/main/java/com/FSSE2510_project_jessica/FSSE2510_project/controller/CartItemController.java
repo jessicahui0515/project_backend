@@ -23,7 +23,7 @@ public class CartItemController {
     private final CartItemService cartItemService;
     private final CartItemDtoMapper cartItemDtoMapper;
 
-    public CartItemController(UserDataMapper userDataMapper, CartItemService cartItemService, CartItemDataMapper cartItemDataMapper, CartItemDtoMapper cartItemDtoMapper) {
+    public CartItemController(UserDataMapper userDataMapper, CartItemService cartItemService, CartItemDtoMapper cartItemDtoMapper) {
         this.userDataMapper = userDataMapper;
         this.cartItemService = cartItemService;
         this.cartItemDtoMapper = cartItemDtoMapper;

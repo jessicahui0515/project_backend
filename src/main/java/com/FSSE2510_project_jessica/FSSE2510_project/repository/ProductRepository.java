@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductRepository extends CrudRepository<ProductEntity, Integer> {
-    Optional<ProductEntity> findById (Integer uid);
+//    Optional<ProductEntity> findById (Integer uid);
 
     List<ProductEntity> findAllByCategories_Category(String category);
 }
