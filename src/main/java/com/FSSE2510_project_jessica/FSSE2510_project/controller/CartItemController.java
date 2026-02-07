@@ -4,7 +4,6 @@ import com.FSSE2510_project_jessica.FSSE2510_project.config.EnvConfig;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.cartItem.Dto.CartItemRespDto;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.cartItem.domainObject.CartItemRespData;
 import com.FSSE2510_project_jessica.FSSE2510_project.data.user.domainObject.FirebaseUserReqData;
-import com.FSSE2510_project_jessica.FSSE2510_project.mapper.cartItem.CartItemDataMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.cartItem.CartItemDtoMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.mapper.user.UserDataMapper;
 import com.FSSE2510_project_jessica.FSSE2510_project.service.CartItemService;
