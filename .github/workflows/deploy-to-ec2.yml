@@ -57,4 +57,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
             docker stop project_backend || true
             docker rm project_backend || true
-            docker run -d --name project_backend -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
+            docker run -d --name project_backend -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
