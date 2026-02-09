@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.FSSE2510_project_jessica'
-version = '2.0.2'
+version = '2.0.3'
 description = 'Demo project for Spring Boot'
 
 java {
