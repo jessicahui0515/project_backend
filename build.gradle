@@ -42,14 +42,3 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-jib {
-    to{
-        image="docker.io/jessica0510/project-backend"
-
-		auth{
-			username = 'jessica0510'
-			password = 'dckr_pat_Qyy_bNgBm5MwkerVWIbDu40ga_0'
-		}
-
-	}
-}
