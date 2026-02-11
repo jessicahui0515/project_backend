@@ -26,6 +26,8 @@ jobs:
       # Assemble project to JAR
       - name: Build JAR with Gradle
         run: ./gradlew build -x test
+        env: 
+          STRIPE_SECRET_KEY: ${{ secrets.STRIPE_SECRET_KEY }}
 
       # Login to Docker Hub
       - name: Login to Docker Hub
@@ -57,4 +59,7 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
             docker stop project_backend || true
             docker rm project_backend || true
-            docker run -d --name project_backend -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
+            docker run -d --name project_backend \
+              -p 8080:8080 \
+              -e STRIPE_SECRET_KEY=${{ secrets.STRIPE_SECRET_KEY }} \
+              ${{ secrets.DOCKER_USERNAME }}/project_backend:latest
