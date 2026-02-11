@@ -22,7 +22,7 @@ public class StripeServiceImpl implements StripeService {
     @Override
     public CheckoutSessionResponse createCheckSession(TransactionEntity transactionEntity) {
         try{
-        Stripe.apiKey = "sk_test_51ShOP6DcJnndf8fBuxnaYNvc4WJt4aE2919rsUTCCHFY1lryJAQvWT2DobuOBZYhd16kz4bCIeKi7vhaVuqpQMxE00WNRWOiWG";
+        Stripe.apiKey = System.getenv("STRIPE_SECRET_KEY");
 
         List<SessionCreateParams.LineItem> lineItems = new ArrayList<>();
 
